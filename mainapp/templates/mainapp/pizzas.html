@@ -1,0 +1,25 @@
+<div>
+    <style>
+        pizzas {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        pizza {
+            margin: 10px;
+            width: 200px;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background: white;
+        }
+    </style>
+
+    <pizzas>
+        {% for name, url, text in info %}
+        <pizza>
+            {% include 'mainapp/pizza.html' %}
+        </pizza>
+        {% endfor %}
+    </pizzas>
+</div>

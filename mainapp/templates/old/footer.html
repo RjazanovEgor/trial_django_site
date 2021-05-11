@@ -1,0 +1,36 @@
+<div>
+    <style>
+    child {
+        padding: 10px;
+        margin: 10px;
+        flex: 33%;
+      }
+    perent {
+        display: flex;
+        height: 100px;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    </style>
+
+    <perent>
+
+        <child>
+            <text>
+                Время работы: Ежедневно, с 6.00 до 22.00
+            </text>
+        </child>
+
+        <child>
+            {% include 'mainapp/messegers.html' %}
+        </child>
+
+        <child align="right">
+            <text>
+                Тел.: 8-800-xxx-xx-xx
+            </text>
+        </child>
+    </perent>
+</div>

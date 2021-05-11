@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+        <title>{% block title %}{% endblock %}</title>
+        <style>
+            grandperents {
+                display: flex;
+                flex-direction: column;
+            }
+            perents {
+                height: 200px;
+                flex: 1;
+            }
+            body {
+                margin: 0px;
+            }
+            h1 {
+                font-family: Open Sans;
+                font-size: 40px;
+                color: #000000;
+            }
+            a {
+                font-family: Open Sans;
+                font-size: 20px;
+                color: #000000;
+            }
+            h5 {
+                font-family: Open Sans;
+                font-size: 20px;
+                color: #000000;
+            }
+            h4 {
+                font-family: Open Sans;
+                font-size: 20px;
+                font-weight: bold;
+                color: #00000;
+            }
+            h6 {
+                font-family: Open Sans;
+                font-size: 14px;
+                font-weight: 100;
+                color: #757575;
+            }
+        </style>
+    </head>
+    <body>
+        <grandperents>
+
+            <perents style="background: #ff8000;">
+                {% include 'mainapp/headers.html' %}
+            </perents>
+
+            <perents style="height: 400px;">
+                {% block solid %}{% endblock %}
+            </perents>
+
+            <perents style="background: #ff8000;">
+                {% include 'mainapp/footer.html' %}
+            </perents>
+
+        </grandperents>
+    </body>
+</html>
